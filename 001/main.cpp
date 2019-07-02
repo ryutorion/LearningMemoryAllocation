@@ -14,9 +14,10 @@ void * my_alloc(size_t size)
 
 void my_free(void * p)
 {
+	cerr << "Deallocate " << p << endl;
+
 	VirtualFree(p, 0, MEM_RELEASE);
 
-	cerr << "Deallocate " << p << endl;
 }
 
 int main()
